@@ -1,8 +1,4 @@
 "use client";
-import FollowLink from "@/components/FollowLink";
-import InfoUserGet from "@/components/InfoUserGet";
-import InfoUserGetNumberLikesComments from "@/components/InfoUserGetNumberLikesComments";
-import Post from "@/components/Post";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BannerAndInfoIdUser from "./components/BannerAndInfoIdUser";

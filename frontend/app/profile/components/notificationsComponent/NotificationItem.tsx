@@ -46,9 +46,6 @@ export const NotificationItem = ({
           <p className="text-gray-800 dark:text-white text-base font-medium leading-relaxed">
             {getNotificationMessage(notification)}
           </p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 font-medium">
-            {getTimeAgo(notification.createdAt)}
-          </p>
         </div>
         <div className="rounded-full p-1.5 ">
           {getNotificationIcon(notification.action)}

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SideBarLeft from "@/components/SideBarLeft";
 import Content from "@/components/Content";
 import SideBarRight from "@/components/SideBarRight";

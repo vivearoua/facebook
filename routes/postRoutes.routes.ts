@@ -30,7 +30,6 @@ router.post(
 );
 router.delete("/deletePost/:id", deletePost);
 
-// Uncomment if you want to support post updates
 // router.patch("/updatePost/:id", updatePost);
 
 router.patch("/likeToPost/:id", (req, res, next) => {
