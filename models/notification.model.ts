@@ -1,13 +1,13 @@
 import mongoose, { Schema, Document, Types } from "mongoose";
 
-export interface IPost extends Document {
+export interface INotification extends Document {
   senderUserId: Types.ObjectId;
   postId?: Types.ObjectId;
   isRead: boolean;
   action: string;
 }
 
-const notificationSchema = new Schema<IPost>({
+const notificationSchema = new Schema<INotification>({
   senderUserId: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
@@ -28,6 +28,6 @@ const notificationSchema = new Schema<IPost>({
   },
 });
 
-const Notification = mongoose.model<IPost>("Notification", notificationSchema);
+const Notification = mongoose.model<INotification>("Notification", notificationSchema);
 
 export default Notification;

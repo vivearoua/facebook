@@ -12,6 +12,7 @@ export interface IUser extends Document {
   Skills: string[];
   communities: Types.ObjectId[];
   notifications: Types.ObjectId[];
+  banner : string | undefined;
   posts: Types.ObjectId[];
   numberOfLikes: number;
   numberOfcomments: number;
@@ -88,6 +89,10 @@ const userSchema = new Schema<IUser>(
       default: [],
       ref: "Post",
     },
+    banner : {
+      type : String,
+      default :""
+    }
   },
   { timestamps: true }
 );

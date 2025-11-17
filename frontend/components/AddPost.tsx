@@ -20,13 +20,11 @@ const AddPost: React.FC<AddPostProps> = ({ context, setContext, token }) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file type
-    if (!file.type.startsWith('image/')) {
+    if (!file.type.startsWith("image/")) {
       alert("Please select an image file");
       return;
     }
 
-    // Validate file size (5MB max)
     if (file.size > 5 * 1024 * 1024) {
       alert("Image size should be less than 5MB");
       return;
@@ -89,7 +87,6 @@ const AddPost: React.FC<AddPostProps> = ({ context, setContext, token }) => {
       );
 
       if (response.status === 201) {
-        alert("Post created successfully!");
         setContext("");
         setImageName(null);
       } else {
@@ -113,7 +110,6 @@ const AddPost: React.FC<AddPostProps> = ({ context, setContext, token }) => {
         onChange={(e) => setContext(e.target.value)}
       />
 
-      {/* Uploading Indicator */}
       {isUploading && (
         <div className="flex justify-center items-center w-full px-5 py-4">
           <div className="flex items-center space-x-3">

@@ -1,12 +1,9 @@
 import {
-  Bell,
-  BookMarked,
-  ChartBarBig,
   Heart,
   Newspaper,
   Users,
 } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 
 const sections = [
   {
@@ -30,30 +27,9 @@ const sections = [
     color: "text-rose-600",
     activeColor: "bg-rose-600",
   },
-  {
-    name: "Saved",
-    icon: BookMarked,
-    id: "saved",
-    color: "text-purple-600",
-    activeColor: "bg-purple-600",
-  },
-  {
-    name: "Analysis",
-    icon: ChartBarBig,
-    id: "analysis",
-    color: "text-amber-600",
-    activeColor: "bg-amber-600",
-  },
-  {
-    name: "Notifications",
-    icon: Bell,
-    id: "notifications",
-    color: "text-purple-600",
-    activeColor: "bg-purple-600",
-  },
 ];
 
-const StateSection = ({
+const StateSectionUserId = ({
   stateSection,
   setStateSection,
 }: {
@@ -93,4 +69,4 @@ const StateSection = ({
   );
 };
 
-export default StateSection;
+export default StateSectionUserId;

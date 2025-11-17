@@ -14,12 +14,12 @@ const SideBarRight = () => {
           <div>
             <h2 className="text-xl font-bold ">Your Followers</h2>
           </div>
-          <div className="bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold backdrop-blur-sm">
+          <div className="bg-white/20 rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold backdrop-blur-sm">
             {user?.followers?.length || 0}
           </div>
         </div>
 
-        {/* Followers List */}
+ 
         <div className="space-y-3">
           {user?.followers && user.followers.length > 0 ? (
             user.followers.map((follower, index) => (

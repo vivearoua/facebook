@@ -29,7 +29,7 @@ const SideBar = () => {
     {
       icon: Bell,
       label: "Notifications",
-      href: "/notifications",
+      href: "/",
       color: "text-yellow-600",
     },
     {
@@ -41,7 +41,7 @@ const SideBar = () => {
     {
       icon: Settings,
       label: "Settings",
-      href: "/settings",
+      href: "/",
       color: "text-gray-600",
     },
   ];

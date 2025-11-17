@@ -98,15 +98,12 @@ const Header = () => {
     }
   };
 
-  // Handle nav click
   const handleNavClick = (path: string) => {
     setActiveNav(path);
   };
 
-  // Count unread notifications
   const unreadCount = notifications.filter((notif) => !notif.isRead).length;
 
-  // Return skeleton UI while loading user data
   if (loading) {
     return (
       <div className="z-10 fixed left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg h-16 rounded-2xl bottom-6 px-6 flex items-center justify-between shadow-lg border border-gray-200 animate-pulse">
@@ -121,8 +118,6 @@ const Header = () => {
       </div>
     );
   }
-
-  // Generate profile image URL
   const serverUrl =
     process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
   const profileImage = user?.avatar

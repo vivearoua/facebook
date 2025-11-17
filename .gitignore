@@ -12,8 +12,9 @@
 !.yarn/releases
 !.yarn/versions
 
-/assets/ImagePosts
-/assets/userAvatars
+/assets/ImagePosts/*
+/assets/userAvatars/*
+/assets/banners/*
 
 # testing
 /coverage

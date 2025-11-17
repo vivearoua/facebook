@@ -3,8 +3,8 @@ import fs from "fs";
 import multer, { FileFilterCallback } from "multer";
 import {Request} from "express";
 
-const UploadImage = () => {
-  const up_file = path.join(__dirname, "../assets/userAvatars");
+const UploadBanner = () => {
+  const up_file = path.join(__dirname, "../assets/banners");
   const storage = multer.diskStorage({
     destination: (req, file, cb) => {
       if (!fs.existsSync(up_file)) {
@@ -42,4 +42,4 @@ const UploadImage = () => {
   });
 };
 
-export default UploadImage;
+export default UploadBanner;

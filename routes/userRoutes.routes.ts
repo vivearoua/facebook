@@ -15,13 +15,18 @@ import addSavePost from "../controllers/user/addSavePost";
 import removeSavedPost from "../controllers/user/removeSavedPost";
 import getNotification from "../controllers/user/getNotification";
 import editMainJob from "../controllers/user/editMainJob";
+import UploadBanner from "../middlewares/uploadBanner";
+import addBanner from "../controllers/user/addBanner";
 
 const router = express.Router();
 const upload = UploadImage();
+const banner = UploadBanner();
 
 router.use(authMiddleware);
 
 router.patch("/addAvatar", upload.single("avatar"), addAvatar);
+router.patch("/add-banner", banner.single("banner"), addBanner);
+
 router.patch("/editFullName", editFullName);
 router.patch("/editBio", editBio);
 router.patch("/editMainJob", editMainJob);
