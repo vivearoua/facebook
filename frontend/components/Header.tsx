@@ -66,14 +66,18 @@ const Header = () => {
 
     // Setup WebSocket connection for real-time notifications
     const socket = getSocket();
-    socket.on("newNotification", (populateNotifi) => {
-      console.log(populateNotifi);
-      setNotifications((prev) => [populateNotifi, ...prev]);
-    });
+    if (socket) {
+      socket.on("newNotification", (populateNotifi) => {
+        console.log(populateNotifi);
+        setNotifications((prev) => [populateNotifi, ...prev]);
+      });
+    }
 
     // Cleanup socket connection on component unmount
     return () => {
-      socket.disconnect();
+      if (socket) {
+        socket.disconnect();
+      }
     };
   }, [token]);
 
@@ -155,11 +159,10 @@ const Header = () => {
           <div
             className={`
             p-2 rounded-full transition-all duration-300
-            ${
-              showNotifications
+            ${showNotifications
                 ? "bg-blue-100 text-blue-600"
                 : "bg-gray-100 text-gray-600 group-hover:bg-blue-50 group-hover:text-blue-500"
-            }
+              }
           `}
           >
             <Bell className="w-5 h-5" />

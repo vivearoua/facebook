@@ -7,7 +7,7 @@ import SideBar from "@/components/SideBar";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
   }, [pathname]);
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
         <AppProviders>
           {!isAuthPage && (
             <>
