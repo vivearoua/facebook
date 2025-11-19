@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import getavatar from "@/utils/getavatar";
 import { FaRegHeart, FaHeart, FaRegComments } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa6";
 import { GrSend } from "react-icons/gr";
@@ -121,13 +122,12 @@ const Post: React.FC<PostProps> = ({
     <div className="w-[95%] mx-auto my-5 h-fit pb-5 bg-[#E6EEFA] rounded-lg">
       <div className="flex items-center p-4 justify-between">
         <Link href={`/user/${idUser}`} className="flex items-center">
-          <Image
-            src={userImage || "/default-avatar.png"}
-            width={50}
-            height={50}
+          <img
+            src={getavatar(userImage)}
+            width={60}
+            height={60}
             alt={`${username}'s Profile`}
             className="rounded-full object-cover w-[60px] h-[60px]"
-            priority
           />
           <div className="text-sm font-semibold ml-3">
             {username}

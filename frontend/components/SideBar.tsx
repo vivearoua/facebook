@@ -103,7 +103,7 @@ const SideBar = () => {
           <div className="relative">
             <div className="p-[2px] bg-gradient-to-r from-purple-500 to-blue-600 rounded-full">
               <div className="w-12 h-12 rounded-full bg-white p-0.5">
-                <Image
+                <img
                   src={getavatar(user?.avatar)}
                   alt={user?.fullName || "Profile"}
                   width={48}

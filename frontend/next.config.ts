@@ -5,8 +5,13 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '5000', 
-        pathname: '/assets/**', 
+        port: '5000',
+        pathname: '/assets/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.dicebear.com',
+        pathname: '/**',
       },
     ],
   },

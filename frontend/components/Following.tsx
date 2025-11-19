@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import getavatar from "@/utils/getavatar";
 
 const Following = ({
   name,
@@ -15,9 +15,6 @@ const Following = ({
   imageSrc: string;
   id: string;
 }) => {
-  const serverUrl =
-    process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
-
   return (
     <div className="group">
       <Link
@@ -26,14 +23,10 @@ const Following = ({
          hover:bg-slate-100"
       >
         <div className="relative flex-shrink-0 p-3">
-          <Image
-            src={
-              imageSrc
-                ? `${serverUrl}/assets/userAvatars/${imageSrc}`
-                : "/default-avatar.png"
-            }
-            width={60}
-            height={60}
+          <img
+            src={getavatar(imageSrc)}
+            width={48}
+            height={48}
             alt={`${name}'s profile image`}
             className="rounded-full object-cover w-12 h-12 
               transition-transform duration-200"

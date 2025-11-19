@@ -33,7 +33,7 @@ const seedData = async () => {
                 bio: "Software engineer passionate about web development and AI",
                 mainJob: "Senior Software Engineer",
                 Skills: ["JavaScript", "TypeScript", "React", "Node.js"],
-                avatar: "/userImage.webp",
+                avatar: "alice.png",
             },
             {
                 fullName: "Bob Smith",
@@ -42,7 +42,7 @@ const seedData = async () => {
                 bio: "UI/UX designer creating beautiful and intuitive interfaces",
                 mainJob: "Lead UI/UX Designer",
                 Skills: ["Figma", "Adobe XD", "Sketch", "CSS"],
-                avatar: "/userImage.webp",
+                avatar: "bob.png",
             },
             {
                 fullName: "Charlie Brown",
@@ -51,7 +51,7 @@ const seedData = async () => {
                 bio: "Full-stack developer and tech enthusiast",
                 mainJob: "Full Stack Developer",
                 Skills: ["Python", "Django", "React", "PostgreSQL"],
-                avatar: "/userImage.webp",
+                avatar: "charlie.png",
             },
             {
                 fullName: "Diana Prince",
@@ -60,7 +60,7 @@ const seedData = async () => {
                 bio: "Product manager with a passion for innovation",
                 mainJob: "Product Manager",
                 Skills: ["Agile", "Scrum", "Product Strategy", "Analytics"],
-                avatar: "/userImage.webp",
+                avatar: "diana.png",
             },
             {
                 fullName: "Ethan Hunt",
@@ -69,7 +69,7 @@ const seedData = async () => {
                 bio: "DevOps engineer automating everything",
                 mainJob: "DevOps Engineer",
                 Skills: ["Docker", "Kubernetes", "AWS", "CI/CD"],
-                avatar: "/userImage.webp",
+                avatar: "ethan.png",
             },
         ]);
 
