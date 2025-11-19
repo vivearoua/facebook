@@ -1,6 +1,5 @@
 // ListOfLikesUsers.tsx
 import getavatar from "@/utils/getavatar";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -30,7 +29,7 @@ const ListOfLikesUsers: React.FC<ListOfLikesUsersProps> = ({ users }) => {
       </div>
 
       <div className="max-h-64 overflow-y-auto">
-        {users.map((user , index) => (
+        {users.map((user, index) => (
           <Link
             href={`/user/${user._id}`}
             key={index}
@@ -38,11 +37,11 @@ const ListOfLikesUsers: React.FC<ListOfLikesUsersProps> = ({ users }) => {
           >
             <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-600 flex-shrink-0">
               {user.avatar ? (
-                <Image
+                <img
                   src={getavatar(user.avatar)}
                   alt={user.fullName}
-                  width={50}
-                  height={50}
+                  width={32}
+                  height={32}
                   className="w-full h-full object-cover"
                 />
               ) : (

@@ -1,6 +1,5 @@
 import getavatar from "@/utils/getavatar";
 import { FolderUp } from "lucide-react";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import InfoEditing from "./InfoEditing";
 import handleImageUpload from "../api/handleImageUpload";
@@ -27,11 +26,11 @@ const UserInfoEdit = ({ name, email, job, avatar }: IUserInfo) => {
         className="relative p-[3px] bg-gradient-to-r from-purple-500
        to-blue-600 rounded-full group  "
       >
-        <Image
+        <img
           src={getavatar(avatar)}
           alt={name || "user"}
-          width={100}
-          height={100}
+          width={96}
+          height={96}
           className=" w-24 h-24 rounded-full object-cover "
         />
         <div

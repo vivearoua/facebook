@@ -1,6 +1,5 @@
 import getavatar from "@/utils/getavatar";
 import { Divide, SquarePen, Trash2, X } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import handleDeletePost from "../../api/handleDeletePost";
 import { useCurrentUser } from "@/context/ProfileContexts";
@@ -34,11 +33,11 @@ const PostEditableInfo = ({
           className="relative p-[3px] bg-gradient-to-r from-purple-500
        to-blue-600 rounded-full "
         >
-          <Image
+          <img
             src={getavatar(avatar)}
             alt="profile"
-            width={50}
-            height={50}
+            width={64}
+            height={64}
             className="w-16 h-16 rounded-full object-cover "
           />
           <div

@@ -42,7 +42,7 @@ const InterActivePost = ({
         }}
       >
         <Heart className={` ${isLiked && "text-red-500 "}`} />
-        <div>{likes.length} Likes</div>
+        <div>{likes?.length || 0} Likes</div>
 
         {isHoveringLikes && <ListOfLikesUsers users={likes} />}
       </div>
@@ -52,7 +52,7 @@ const InterActivePost = ({
         onClick={() => setIsOpenComments(!isOpenComments)}
       >
         <MessageSquareText />
-        <div>{comments.length} Comments</div>
+        <div>{comments?.length || 0} Comments</div>
       </div>
 
       <div className="flex justify-center items-center gap-3 cursor-pointer hover:text-green-500 transition-colors">

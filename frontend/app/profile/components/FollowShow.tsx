@@ -1,6 +1,5 @@
 import { useCurrentUser } from "@/context/ProfileContexts";
 import getavatar from "@/utils/getavatar";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Users, UserCheck, UserPlus } from "lucide-react";
@@ -86,7 +85,7 @@ const FollowShow = ({
               className="flex items-center gap-4 flex-1 min-w-0"
             >
               <div className="relative p-[2px] bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">
-                <Image
+                <img
                   src={getavatar(follow.avatar)}
                   width={56}
                   height={56}
@@ -166,7 +165,7 @@ const FollowShow = ({
                     </button>
                   ) : (
                     // Other users - show following button
-                    <button 
+                    <button
                       className="px-4 py-2 bg-red-50 text-red-600 hover:bg-red-100 dark:hover:bg-red-900/30 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2 border border-red-200"
                       onClick={() => {
                         handleBeginUnFollow(follow._id, token, setUser);

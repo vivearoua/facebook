@@ -1,5 +1,4 @@
 import { EyeOff } from "lucide-react";
-import Image from "next/image";
 import getavatar from "@/utils/getavatar";
 import { INotification } from "./types";
 import {
@@ -19,11 +18,10 @@ export const NotificationItem = ({
 }: NotificationItemProps) => {
   return (
     <div
-      className={`p-6 transition-all duration-300 group hover:bg-white/50  ${
-        notification.isRead
+      className={`p-6 transition-all duration-300 group hover:bg-white/50  ${notification.isRead
           ? "bg-white/50 "
           : "bg-gradient-to-r from-blue-50 to-purple-50   border-l-4 border-l-blue-500"
-      }`}
+        }`}
     >
       <div className="flex items-start gap-5">
         <div className="flex-shrink-0 relative">
@@ -31,7 +29,7 @@ export const NotificationItem = ({
             <div
               className="w-16 h-16"
             >
-              <Image
+              <img
                 src={getavatar(notification.senderUserId.avatar)}
                 width={64}
                 height={64}
