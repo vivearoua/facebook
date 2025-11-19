@@ -19,7 +19,7 @@ const SideBarRight = () => {
           </div>
         </div>
 
- 
+
         <div className="space-y-3">
           {user?.followers && user.followers.length > 0 ? (
             user.followers.map((follower, index) => (
@@ -29,13 +29,13 @@ const SideBarRight = () => {
                 email={follower?.email}
                 mainJob={follower?.mainJob}
                 imageSrc={follower?.avatar}
-                id = {follower.id}
+                id={follower._id}
               />
             ))
           ) : (
             <div className="text-center py-8">
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <span className="text-2xl "><User/></span>
+                <span className="text-2xl "><User /></span>
               </div>
               <p className="text-gray-300 text-sm mb-2">No followers yet</p>
               <button className=" text-xs font-medium  transition-colors">

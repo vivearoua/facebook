@@ -69,6 +69,7 @@ const SideBarLeft = () => {
               email={follower?.email}
               mainJob={follower?.mainJob}
               imageSrc={follower?.avatar}
+              id={follower._id}
             />
           ))
         ) : (

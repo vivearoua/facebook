@@ -12,7 +12,7 @@ export interface CurrentUser {
     {
       fullName: string;
       avatar: string;
-      id: string;
+      _id: string;
       email: string;
       mainJob: string;
     }
@@ -21,7 +21,7 @@ export interface CurrentUser {
     {
       fullName: string;
       avatar: string;
-      id: string;
+      _id: string;
       email: string;
       mainJob: string;
     }

@@ -49,9 +49,8 @@ const SideBar = () => {
   if (loading) {
     return (
       <div
-        className={`fixed left-0 top-0 h-screen bg-gradient-to-b from-blue-50 to-indigo-100 border-r border-gray-200 transition-all duration-300 ${
-          sideBarIsOpen ? "w-64" : "w-0 overflow-hidden"
-        }`}
+        className={`fixed left-0 top-0 h-screen bg-gradient-to-b from-blue-50 to-indigo-100 border-r border-gray-200 transition-all duration-300 ${sideBarIsOpen ? "w-64" : "w-0 overflow-hidden"
+          }`}
       >
         <div className="flex flex-col items-center space-y-6 p-4">
           <div className="w-20 h-20 rounded-full bg-gray-300 animate-pulse"></div>
@@ -73,11 +72,10 @@ const SideBar = () => {
     <div
       className={`fixed left-0 top-0 h-screen bg-gradient-to-b from-white to-blue-50/30
                border-r border-gray-200/60 backdrop-blur-sm transition-all duration-300 
-               ${
-                 sideBarIsOpen
-                   ? "w-64 opacity-100"
-                   : "w-0 opacity-0 overflow-hidden"
-               } z-50 shadow-xl`}
+               ${sideBarIsOpen
+          ? "w-64 opacity-100"
+          : "w-0 opacity-0 overflow-hidden"
+        } z-50 shadow-xl`}
     >
       <div className="p-6 border-b border-gray-200/60">
         <div className="flex items-center justify-between">
@@ -155,6 +153,10 @@ const SideBar = () => {
 
       <div className="absolute bottom-6 left-0 right-0 px-4">
         <button
+          onClick={() => {
+            localStorage.removeItem("accessToken");
+            window.location.href = "/logIn";
+          }}
           className="flex items-center gap-3 p-3 rounded-xl transition-all duration-200 
                     bg-red-50 hover:bg-red-100 hover:shadow-md w-full group"
         >
